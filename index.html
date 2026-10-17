@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deploy Test</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #181b22;
+      --text: #e8e9ed;
+      --muted: #9aa0ad;
+      --accent: #f6821f;
+      --ok: #3ccf91;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      padding: 24px 16px;
+    }
+    main {
+      width: 100%;
+      max-width: 560px;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--ok);
+      background: rgba(60,207,145,.12);
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); }
+    h1 { font-size: 28px; margin: 18px 0 8px; }
+    p { color: var(--muted); line-height: 1.6; margin: 0 0 24px; }
+    ol { list-style: none; padding: 0; margin: 0 0 24px; }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    li span.n {
+      flex: none;
+      width: 28px; height: 28px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: rgba(246,130,31,.15);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .version {
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding-top: 16px;
+    }
+    .version b { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge"><span class="dot"></span>Deployed</span>
+    <h1>It works!</h1>
+    <p>This page was written by Claude, pushed straight to GitHub, and deployed automatically by Cloudflare. No zip files involved.</p>
+    <ol>
+      <li><span class="n">1</span>You ask Claude for a change</li>
+      <li><span class="n">2</span>Claude edits the code and pushes to GitHub</li>
+      <li><span class="n">3</span>Cloudflare redeploys on its own</li>
+      <li><span class="n">4</span>You refresh and see it live</li>
+    </ol>
+    <div class="version">Version <b>1</b> · ask Claude to change anything here and watch it update.</div>
+  </main>
+</body>
+</html>
